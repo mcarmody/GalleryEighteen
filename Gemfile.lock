@@ -44,6 +44,8 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.0.2)
+    font-awesome-sass (4.0.2)
+      sass-rails (>= 3.1.1)
     foundation-rails (5.0.3.1)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
@@ -59,6 +61,8 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    masonry-rails (0.2.1)
+      rails
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.8.4)
@@ -123,9 +127,11 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise
+  font-awesome-sass
   foundation-rails
   jbuilder (~> 1.2)
   jquery-rails
+  masonry-rails
   rails (= 4.0.2)
   sass-rails (~> 4.0.0)
   sdoc

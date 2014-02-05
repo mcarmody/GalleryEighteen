@@ -33,6 +33,12 @@ gem 'devise'
 #foundation
 gem 'foundation-rails'
 
+#font-awesome
+gem 'font-awesome-sass'
+
+#masonry
+gem 'masonry-rails'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

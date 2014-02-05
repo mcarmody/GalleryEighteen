@@ -15,5 +15,23 @@
 //= require turbolinks
 //= require_tree .
 //= require foundation
+//= require masonry/jquery.masonry
+//= require masonry/jquery.event-drag
+//= require masonry/jquery.imagesloaded.min
+//= require masonry/jquery.infinitescroll.min
+//= require masonry/modernizr-transitions
+//= require masonry/box-maker
+//= require masonry/jquery.loremimages.min
+
 $(document).foundation();
 $(function(){ $(document).foundation(); });
+
+$(function(){
+
+  $('#masonry-container').masonry({
+    itemSelector: '.box',
+    columnWidth: 280,
+    gutterWidth: 30
+  });
+
+});
