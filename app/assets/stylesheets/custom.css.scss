@@ -1,5 +1,10 @@
+body {
+	overflow-x:hidden;
+}
+
 .wallpaper {
-	height: 100vh;
+	position: relative;
+	height: 93vh;
 	background: url("SimoneAnne-6292.jpg") no-repeat;
 	background-size: cover;
 }
@@ -8,7 +13,6 @@
 	width: 90%;
 	max-width: 960px;
 	margin: 0 auto;
-	height: 100%;
 }
 
 .form {
@@ -29,10 +33,6 @@
 		width: 80px;
 		text-align: right;
 	}
-}
-
-.header {
-	background: none;
 }
 
 .login {
@@ -68,15 +68,14 @@ i {
 
 .footer {
 	position: absolute;
-	top: 90vh;
+	top: 89vh;
 	width: 100%;
 	margin-top: 20px;
 	border-top: 2px solid transparentize(gray, .3);
-	border-bottom: 2px solid transparentize(gray, .3);
 	padding: 5px;
 	padding-top: 10px;
 	background: transparentize(gray, .6);
-	height: 10vh;
+	height: 8vh;
 	font-size: 10pt;
 	text-align: center;
 }
