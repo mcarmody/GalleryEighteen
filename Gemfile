@@ -30,6 +30,9 @@ gem 'jbuilder', '~> 1.2'
 #devise
 gem 'devise'
 
+#oauth (various)
+gem 'omniauth-twitter'
+
 #foundation
 gem 'foundation-rails'
 

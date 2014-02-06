@@ -1,3 +1,9 @@
+.wallpaper {
+	height: 100vh;
+	background: url("SimoneAnne-6292.jpg") no-repeat;
+	background-size: cover;
+}
+
 .container {
 	width: 90%;
 	max-width: 960px;
@@ -6,18 +12,17 @@
 }
 
 .form {
-
 	padding: 10px;
 	position: relative;
-	top: 100px;
+	top: 50px;
 	width: 400px;
 	margin: 0 auto;
 	box-shadow: 0px 0px 4px black;
 	border-radius: 2px;
+	background: transparentize(white, .3);
 }
 
 .email, .password {
-
 	label {
 		position: absolute;
 		margin-left: 50px;
@@ -26,11 +31,15 @@
 	}
 }
 
-	.login {
-		margin: 10px;
-		width: 200px;
-		margin-left: 150px;
-	}
+.header {
+	background: none;
+}
+
+.login {
+	margin: 10px;
+	width: 200px;
+	margin-left: 150px;
+}
 
 .remember {
 	position: relative;
@@ -49,9 +58,25 @@
 }
 
 i {
+	margin: 0 auto;
+	margin-top: 10px;
 	color: darkblue;
 	width: 100%;
 	font-size: 50pt;
-	margin: 10px;
+	text-align: center;
+}
+
+.footer {
+	position: absolute;
+	top: 90vh;
+	width: 100%;
+	margin-top: 20px;
+	border-top: 2px solid transparentize(gray, .3);
+	border-bottom: 2px solid transparentize(gray, .3);
+	padding: 5px;
+	padding-top: 10px;
+	background: transparentize(gray, .6);
+	height: 10vh;
+	font-size: 10pt;
 	text-align: center;
 }
