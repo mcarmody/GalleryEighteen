@@ -31,7 +31,7 @@ $(function(){
   $('#masonry-container').masonry({
     itemSelector: '.box',
     columnWidth: 280,
-    gutterWidth: 30
+    gutterWidth: 20
   });
 
 });

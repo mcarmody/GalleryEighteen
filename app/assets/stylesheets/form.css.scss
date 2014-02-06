@@ -1,0 +1,66 @@
+$formcolor:transparentize(white, .3);
+
+.form {
+	padding: 10px;
+	padding-right: 10px;
+	position: relative;
+	top: 50px;
+	width: 350px;
+	margin: 0 auto;
+	box-shadow: 0px 0px 4px black;
+	border-radius: 2px;
+	background: $formcolor;
+
+	.forgot {
+		float: right;
+	}
+
+	.signup {
+		position: relative;
+		top: 18px;
+	}
+
+	a {
+		&:hover {
+			background-color: transparentize($formcolor, 1);
+			color: darkblue;
+		}
+	}
+}
+
+.email, .password {
+
+	width: 80%;
+	margin: 0 auto;
+
+	label {
+		position: relative;
+		width: 80px;
+	}
+}
+
+.login {
+	position: relative;
+	margin: 0 auto;
+	margin-left: 35px;
+	width: 20%;
+}
+
+.remember {
+	position: relative;
+	float: right;
+	margin-right: 5%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+
+}
+
+i {
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	color: darkblue;
+	width: 100%;
+	font-size: 50pt;
+	text-align: center;
+}

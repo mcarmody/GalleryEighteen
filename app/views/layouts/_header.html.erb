@@ -8,34 +8,29 @@
 	  </ul>
 
 	  <section class="top-bar-section">
+
+	    
+    	<!-- Left Nav Section -->
+	    <ul class="left">
+	      <li><%= link_to 'Browse', items_path %></li>
+	    </ul>
 	    <!-- Right Nav Section -->
 	    <ul class="right">
 	    <% if user_signed_in? %>
 	      <li class="active"><%= link_to 'Sign Out', destroy_user_session_path, method: 'delete' %></li>
+
 	      <li class="has-dropdown">
 	        <a href="#">My Account</a>
 	        <ul class="dropdown">
 	          <li><%= link_to 'Profile', user_path(current_user) %></li>
 	        </ul>
 	      </li>
-    	<% else %>
-    		<%= link_to "Sign up", new_registration_path(resource_name), :class => 'button [radius round]'%>
-    	<% end %>
-	    </ul>
+	 
+	    <% else %>
+	    	<%= link_to 'Sign Up', new_registration_path(resource_name), :class => 'button radius', :id => 'signup'%>
+		<% end %>
+		</ul>
 
-    	<!-- Left Nav Section -->
-	    <ul class="left">
-	      <li><%= link_to 'Browse', items_path %></li>
-	    </ul>
 	  </section>
 	</nav>
 </div>
-<!-- <div class="contain-to-grid sticky">
-		<ul class="breadcrumbs">
-		  <li><a href="#">Home</a></li>
-		  <li><a href="#">Features</a></li>
-		  <li><a href="#">Gene Splicing</a></li>
-		  <li<a href="#">Cloning</a></li>
-		</ul>
-	  </section>
-</div> -->
