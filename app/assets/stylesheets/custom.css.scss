@@ -15,6 +15,31 @@
 	
 }
 
+//popular artists "row"
+.bar2 {
+	position: relative;
+	height: 400px;
+	background: lightgray;
+	border-top: 2px solid gray;
+	border-bottom: 2px solid gray;
+}
+
+.headshots {
+	width: 1000px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.popular {
+	position: relative;
+	float: left;
+	height: 100px;
+	width: 100px;
+	border-radius: 50px;
+	background: white;
+	margin: 75px;
+}
+
 .right {
 	padding-right: 5px;
 }
@@ -29,7 +54,7 @@
 
 .wallpaper {
 	position: relative;
-	height: 93vh;
+	height: 500px;
 	background: url("SimoneAnne-6292.jpg") no-repeat;
 	background-size: cover;
 }

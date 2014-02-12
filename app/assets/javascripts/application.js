@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.all
 //= require turbolinks
 //= require_tree .
 //= require foundation
@@ -34,4 +35,13 @@ $(function(){
     gutterWidth: 20
   });
 
+});
+
+$(function() {
+	$('.item').mouseenter(function() {
+		$(this).find('.details').css('display', 'inline-block');
+	});
+	$('.item').mouseleave(function() {
+		$(this).find('.details').css('display', 'none');
+	});
 });
