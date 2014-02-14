@@ -14,6 +14,10 @@ group :production do
 	gem 'rails_12factor'
 end
 
+# Gemfile
+gem 'paperclip'
+gem 'aws-sdk'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 gem 'compass-rails'
