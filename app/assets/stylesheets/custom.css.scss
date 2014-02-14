@@ -53,12 +53,13 @@ body {
 
 }
 .title {
+	font-size: 24pt;
 	font-family: 'Over the Rainbow', cursive;
 	position: relative;
 	top: $col-width/8*(-1);
 	width: 100%;
 	text-align: center;
-	margin: 0;
+	margin-bottom: 10px;
 	font-family: 'Alegreya Sans SC', sans-serif;
 	font-weight: 300;
 }
@@ -150,7 +151,7 @@ body {
 	height: 450px;
 	background: url("SimoneAnne-8351.jpg") no-repeat;
 	background-size: cover;
-	background-position: 0 -250px;
+	background-position: 0;
 	font-family: 'Alegreya Sans', sans-serif;
 	font-weight: 300;
 }
@@ -192,6 +193,11 @@ body {
 	height: 550px;
 	background: url("SimoneAnne-6292.jpg") no-repeat;
 	background-size: cover;
+}
+
+.wallpaper-login {
+	@extend .wallpaper;
+	height: 100vh;
 }
 
 .footer {
