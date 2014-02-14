@@ -1,28 +1,19 @@
 <div class="wallpaper">
-	<div class="container">
-		<div class="form">
-			<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+	<div class="email-form">
+		<i class="fa fa-users"></i>
+		<div class="hello-world">Hi!  Thanks for checking out GalleryEighteen!  We're finishing up building the site now, and building a great community of artists for you to interact with right from the get-go.  If you throw your email in the box below, we'll let you know as soon as we have any updates!</div>
 		<div class="fields">
-			<i class="fa fa-camera-retro"></i>
-		  	<div class="email"><%= f.label :email %>
-		  	<%= f.email_field :email, :autofocus => true %></div>
-
-		  	<div class="password"><%= f.label :password %>
-		  	<%= f.password_field :password %></div>
-
-	  		<% if devise_mapping.rememberable? -%>
-		    <div class="remember"><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-		  	<% end -%>
-		</div>
-		  <div class="login"><%= f.submit "Sign in", :class => 'tiny button' %></div>
-		<% end %>
-
-		<%= render "devise/shared/links" %>
+		  	<input class="email" id="email"></input>
+	  		<label for = "email">Email goes here!</label>
+		  	</div>
+		  	<%= button_to "Stay Up-To-Date", '#', :class => "email-list", :method => 'get' %>
+		  	<!--new_mailing_list_path should be the above path-->
 		</div>
 	</div>
 </div>
 <div class="bar2">
 	<div class="headshots">
+		<h3 class="title">Featured Artists</h3>
 		<div class="popular" id="first">
 			<a href="#" class="artist-more">
 				<p class="artist-name">Mike Carmody</p>
@@ -37,16 +28,58 @@
 		</div>
 		<div class="popular" id="third">
 			<a href="#" class="artist-more">
-				<p class="artist-name">Cool Artist</p>
+				<p class="artist-name">Barack Obama</p>
 				<p class="artist-detail">Wayfarers lo-fi locavore, 8-bit Godard wolf disrupt forage put a bird on it PBR&B. Brunch 3 wolf moon four loko American Apparel, tofu try-hard hashtag. Odd Future mustache butcher sriracha deep v iPhone. Hella forage small batch street art sustainable next level Banksy, McSweeney's jean shorts YOLO leggings sartorial gluten-free Pitchfork. Polaroid synth distillery YOLO cray, 3 wolf moon gluten-free pug dreamcatcher Schlitz fanny pack messenger bag Banksy tousled butcher. Occupy cliche Schlitz synth fashion axe, iPhone chambray flannel. Twee hella leggings Cosby sweater, 3 wolf moon Pitchfork viral synth dreamcatcher.</p>
 			</a>
 		</div>
 		<div class="popular" id="fourth">
 			<a href="#" class="artist-more">
-				<p class="artist-name">Great Artist</p>
+				<p class="artist-name">Vincent Van Gogh</p>
 				<p class="artist-detail">McSweeney's keytar typewriter mustache, bitters pug 3 wolf moon locavore direct trade try-hard tousled hella gluten-free next level cornhole. Small batch ennui farm-to-table iPhone Truffaut, Odd Future tousled vegan synth Pinterest fashion axe. Post-ironic Terry Richardson PBR High Life selfies bitters. Distillery Williamsburg fixie, fanny pack quinoa you probably haven't heard of them tousled leggings letterpress try-hard craft beer pickled farm-to-table chia. 8-bit slow-carb bicycle rights Pitchfork. Beard freegan ennui selfies asymmetrical disrupt. Food truck direct trade distillery Shoreditch cliche.</p>
 			</a>
 		</div>
 	</div>
 </div>
-<div class="bar3"></div>
+<div class="bar3">
+	<div class="about-us">
+		<h3>What Does This Site Do?</h3>
+		<p>We hope to be the best place for <b>talented art students</b> to jump-start their careers as painters, photographers, sculptors, and designers.  Buyers from around the world can sign on to <b>follow and sponsor</b> talented artists, allowing those artists to develop a professional network of fans and buyers.  Buyers can commission prints with custom sizes, framing, and delivery, while artists can set a price in advance or put their original works up for auction to the public.  We're combining the <b>advantages of the modern web</b> with the proven success of traditional art galleries.  We aim to <b>lower the barrier</b> between young, creative talent and success, and we hope you'll join us in that effort.</p>
+	</div>
+</div>
+<div class="bar4">
+	<h2 class="title">Popular Pieces</h3>
+	<div class="featured-art" id="masonry-container">
+		<div class="featured box">
+			<%= image_tag ('SimoneAnne-0023.jpg'), :id =>'first-pic'%>
+			<label class="featured-label" for="first-pic">Ocean View</label>
+		</div>
+		<div class="featured box">
+			<%= image_tag ('SimoneAnne-1862.jpg'), :id =>'second-pic' %>
+			<label class="featured-label"  for="second-pic">Beach Glass</label>
+		</div>
+		<div class="featured box">
+			<%= image_tag ('SimoneAnne-8689.jpg'), :id =>'eigth-pic' %>
+			<label class="featured-label"  for="eigth-pic">Surfer Dude</label>
+		</div>
+		<div class="featured box">
+			<%= image_tag ('SimoneAnne-1834.jpg'), :id =>'third-pic' %>
+			<label class="featured-label"  for="third-pic">Sunshine</label>
+		</div>
+		<div class="featured box">
+			<%= image_tag ('SimoneAnne-0180.jpg'), :id =>'fourth-pic' %>
+			<label class="featured-label"  for="fourth-pic">Gondola Ride</label>
+		</div>
+		<div class="featured box">
+			<%= image_tag ('SimoneAnne-1871.jpg'), :id =>'fifth-pic' %>
+			<label class="featured-label"  for="fifth-pic">Another Beach</label>
+		</div>
+		<div class="featured box">
+			<%= image_tag ('SimoneAnne-8325.jpg'), :id =>'seventh-pic' %>
+			<label class="featured-label"  for="seventh-pic">Country Road</label>
+		</div>
+		<div class="featured box">
+			<%= image_tag ('SimoneAnne-6289.jpg'), :id =>'sixth-pic' %>
+			<label class="featured-label"  for="sixth-pic">Pathways</label>
+		</div>
+	</div>
+</div>

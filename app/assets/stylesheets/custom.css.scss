@@ -1,4 +1,15 @@
 @import "compass/css3";
+@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300,400,500);
+
+$col-width: 12vw;
+
+body {
+	background-color: darkgray !important;
+}
+
+.button {
+	background-color: #0C92BD;
+}
 
 .welcome {
 	position: fixed;
@@ -15,37 +26,161 @@
 	
 }
 
+%bar {
+	position: relative;
+	border-top: 2px solid gray;
+}
+
 //popular artists "row"
+
 .bar2 {
+	@extend %bar;
 	position: relative;
 	height: 400px;
 	background: lightgray;
-	border-top: 2px solid gray;
-	border-bottom: 2px solid gray;
 }
 
+
 .headshots {
-	width: 1000px;
+	width: $col-width*8;
+	height: 100%;
 	position: relative;
 	margin: 0 auto;
+	padding-top: $col-width/4;
+	padding-bottom: $col-width/4;
+	font-family: 'Alegreya Sans', sans-serif;
+	font-weight: 300;
+
+}
+.title {
+	font-family: 'Over the Rainbow', cursive;
+	position: relative;
+	top: $col-width/8*(-1);
+	width: 100%;
+	text-align: center;
+	margin: 0;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-weight: 300;
 }
 
 .popular {
 	position: relative;
+	top: $col-width/8*(-1);
 	float: left;
-	height: 100px;
-	width: 100px;
-	border-radius: 50px;
+	height: $col-width*1;
+	width: $col-width*1;
+	border-radius: $col-width/2;
 	background: white;
-	margin: 75px;
+	margin-left: $col-width/2;
+	margin-right: $col-width/2;
+	font-family: 'Alegreya Sans', sans-serif;
+	font-weight: 300;
+	
 }
+
+.artist-name {
+	position: relative;
+	top: $col-width;
+	font-weight: bold;
+	margin: 2px 0 0 0;
+	margin-left: $col-width/3*(-1);
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-weight: 400;
+	font-size: 14pt;
+
+
+	&:hover {
+		text-decoration: none;
+		background: transparent;
+	}
+}
+
+.artist-detail {
+	top: $col-width;
+	margin-right: $col-width/3*(-1);
+	margin-left: $col-width/3*(-1);
+	position: relative;
+	height: $col-width/2;
+	min-height: 125px;
+	line-height: 16px;
+	overflow: hidden;
+	font-size: 10pt;
+	margin-bottom: 0;
+	font-family: 'Alegreya Sans', sans-serif;
+	font-weight: 300;
+
+	&:after {
+		content: "";
+		text-align: right;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 70%;
+		height: 15px;
+		background: linear-gradient(to right, rgba(255, 255, 255, 0), lightgray 70%);
+	}
+}
+
+#first {
+	background: url('/assets/profile.jpg') no-repeat;
+	background-size: cover;
+}
+
+#second {
+	background: url('/assets/wood_josh.jpg') no-repeat;
+	background-size: cover;
+}
+
+#third {
+	background: url('/assets/obama.jpg') no-repeat;
+	background-position: -75px 0;
+	background-size: cover;
+}
+
+#fourth {
+	background: url('/assets/van_gogh.jpg') no-repeat;
+	background-size: cover;
+}
+
+//artwork row
+
+.bar3 {
+	@extend %bar;
+	position: relative;
+	height: 450px;
+	background: url("SimoneAnne-8351.jpg") no-repeat;
+	background-size: cover;
+	background-position: 0 -250px;
+	font-family: 'Alegreya Sans', sans-serif;
+	font-weight: 300;
+}
+
+//third row
+
+.bar4 {
+	@extend %bar;
+	//height: 1200px;
+	background: darkgray;
+	padding: 4%;
+	padding-top: 0%;
+	border-bottom: 2px solid gray;
+	font-family: 'Alegreya Sans', sans-serif;
+	font-weight: 300;
+
+	h2 {
+		top: 0px;
+		margin: 10px;
+	}
+}
+
+//other stuff
 
 .right {
 	padding-right: 5px;
 }
 
 #signup {
-	background-color: transparentize(green, .1);
+	background-color: transparentize(#25321A, .1);
 
 	&:hover {
 		background-color: #008cba;
@@ -54,29 +189,70 @@
 
 .wallpaper {
 	position: relative;
-	height: 500px;
+	height: 550px;
 	background: url("SimoneAnne-6292.jpg") no-repeat;
 	background-size: cover;
-}
-
-.container {
-	width: 90%;
-	margin: 0 auto;
 }
 
 .footer {
 	font-size: 8pt;
 	position: fixed;
-	top: 89vh;
+	top: 90vh;
 	margin: 0 auto;
 	width: 100%;
 	margin-top: 20px;
 	border-top: 2px solid transparentize(gray, .3);
 	padding: 5px;
 	background: transparentize(gray, .6);
-	height: 8vh;
-	font-size: 10pt;
+	height: 50px;
+	font-size: 12pt;
 	text-align: center;
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important;
+	border-bottom: 0 !important;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-weight: 300;
+
+}
+
+.featured-art {
+	margin: 0 auto !important;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-weight: 300;
+}
+
+.featured {
+	max-width: 24%;
+	min-width: 200px;
+	padding: 0 !important;
+	box-shadow: 0 0 1px 1px;
+	font-family: 'Alegreya Sans', sans-serif;
+	font-weight: 300;
+	cursor: pointer;
+
+	img {
+		border-radius: 5px !important;
+	}
+}
+
+.about-us {
+	position: relative;
+	float: right;
+	top: 100px;
+	right: 100px;
+	width: 450px;
+	
+	p {
+		font-size: 10pt;
+		font-family: 'Alegreya Sans', sans-serif;
+		font-weight: 300;
+	}
+
+	h3 {
+		font-family: 'Alegreya Sans SC', sans-serif;
+		font-weight: 300;
+		font-family: 'Over the Rainbow', cursive;
+	}
 }
 
 .arrow {
@@ -88,6 +264,31 @@
 	top: 40px;
 }
 
+.featured-label {
+	position: absolute;
+	opacity: .5;
+	bottom: -9px;
+	left: -1px;
+	background: black;
+	display: none;
+	//height: 24px;
+	padding: 4px;
+	color: white;
+	width: 100.5%;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-weight: 300;
+	font-size: 14pt;
+}
+
 .links {
 	font-size: 10pt;
+	font-family: 'Alegreya Sans', sans-serif;
+	font-weight: 300;
+	
+	a:hover {
+		color: white;
+		background: transparent;
+	}
 }

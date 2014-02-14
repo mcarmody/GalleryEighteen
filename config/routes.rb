@@ -1,5 +1,6 @@
 GalleryEighteen::Application.routes.draw do
   resources :items
+  resources :mailing_lists
 
   devise_for :users, :controllers => { :omniauth_callbacks => 'users/omniauth_callbacks'}
   resources :users
@@ -7,7 +8,7 @@ GalleryEighteen::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'items#index'
+  root 'static_pages#index'
 
   get 'users/omniauth_callbacks', to: 'items#index'
 

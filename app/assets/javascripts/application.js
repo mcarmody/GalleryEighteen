@@ -31,8 +31,8 @@ $(function(){
 
   $('#masonry-container').masonry({
     itemSelector: '.box',
-    columnWidth: 280,
-    gutterWidth: 20
+    //columnWidth: 259,
+    //gutterWidth: 5
   });
 
 });
@@ -43,5 +43,28 @@ $(function() {
 	});
 	$('.item').mouseleave(function() {
 		$(this).find('.details').css('display', 'none');
+	});
+});
+
+
+//fade-out on hover over featured category
+$(function() {
+	// $('.featured-art').mouseenter(function() {
+	// 	$(this).find('.featured').css('opacity', '.5');
+	// });
+	$('.featured-art').mouseleave(function() {
+		$(this).find('.featured').css('opacity', '1');
+	});
+});
+
+$(function() {
+	$('.featured').mouseenter(function() {
+		$(this).siblings('.featured').css('opacity', '.5');
+		$(this).find('label').css('display', 'inline');
+		$(this).css('opacity', '1');
+	});
+	$('.featured').mouseleave(function() {
+		$(this).css('opacity', '.5');
+		$(this).find('label').css('display', 'none');
 	});
 });

@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Over+the+Rainbow);
+
 $formcolor:transparentize(white, .3);
 
 .form {
@@ -10,14 +12,20 @@ $formcolor:transparentize(white, .3);
 	box-shadow: 0px 0px 4px black;
 	border-radius: 2px;
 	background: $formcolor;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	line-height: 20px;
+	font-size: 12pt;
+	font-weight: 300;
 
 	.forgot {
 		float: right;
 	}
 
 	.signup {
+		font-family: 'Over the Rainbow', cursive;
 		position: relative;
-		top: 18px;
+		top: 10px;
+		cursor: pointer;
 	}
 
 	a {
@@ -28,15 +36,46 @@ $formcolor:transparentize(white, .3);
 	}
 }
 
-.email, .password {
+.hello-world {
+	padding: 10px;
+	margin-bottom: 20px;
+}
 
+.email-list {
+	@extend .signup;
+	transition: 200ms;
+	display: block;
+	margin: 0 auto;
+	border: 1px solid gray;
+	width: 200px;
+	background: #008cba;
+	font-size: 12pt;
+	height: 40px;
+	color: white;
+
+	&:hover {
+		background: darken(#008cba, 10%);
+	}
+}
+
+.email-form {
+	@extend .form;
+	height: 375px;
+	top: 50px;
+}
+
+.email, .password {
+	display: block;
 	width: 80%;
 	margin: 0 auto;
+	//border: 1px solid gray;
 
-	label {
-		position: relative;
-		width: 80px;
-	}
+}
+
+label {
+	position: relative;
+	width: 100%;
+	text-align: center;
 }
 
 .login {
@@ -58,8 +97,8 @@ $formcolor:transparentize(white, .3);
 i {
 	margin: 0 auto;
 	margin-top: 10px;
-	margin-bottom: 20px;
-	color: darkblue;
+	margin-bottom: 10px;
+	color: #008cba;
 	width: 100%;
 	font-size: 50pt;
 	text-align: center;
