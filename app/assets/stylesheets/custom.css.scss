@@ -11,6 +11,28 @@ body {
 	background-color: #0C92BD;
 }
 
+.breadcrumbs {
+	background: transparent !important;
+	border: none !important;
+	
+	li {
+
+		&:hover {
+			text-decoration: none !important;
+		}
+
+		&::before {
+			color: #666 !important;
+			top: -1px;
+		}
+	}
+
+	a:hover {
+		text-decoration: none !important;
+		background-color: transparent;
+	}
+}
+
 .welcome {
 	position: fixed;
 	right: 0;
@@ -277,7 +299,6 @@ body {
 	left: -1px;
 	background: black;
 	display: none;
-	//height: 24px;
 	padding: 4px;
 	color: white;
 	width: 100.5%;

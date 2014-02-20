@@ -2,23 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$item-width: 280px;
+$item-width: 220px;
 
 .store-container {
+	position: relative;
 	margin-top: 30px;
-	left: 50px
+	max-width: 960px;
+	margin: 0 auto;
 }
 
 .item {
 	width: $item-width;
 	box-shadow: 0 0 2px 2px black;
 	padding: 0 !important;
+	margin: 10px !important;
 	
 	img {
 		max-height: 300px;
 		border-radius: 5px !important;
 
 		width: 100%;
+	}
+
+	.pricetag {
+		float: right;
 	}
 }
 
@@ -41,5 +48,18 @@ $item-width: 280px;
 	padding: 5px;
 	overflow: hidden;
 	line-height: 14px;
-	color: lightgray;
+	
+	a {
+		color: white !important;
+		background: transparent;
+	}
 }
+
+
+
+
+
+
+
+
+
