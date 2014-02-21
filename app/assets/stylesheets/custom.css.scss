@@ -1,28 +1,47 @@
 @import "compass/css3";
 @import url(http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300,400,500);
 
+$dkgray: #bbbbbb;
+$ltgray: #d5d5d5;
+$coreblue: #7da6c7;
+$midblue: #5a8db6;
+$dkblue: #457399;
 $col-width: 12vw;
 
 body {
 	background-color: white !important;
 }
 
+.logo {
+	img {
+		max-width: 200px;
+	}
+}
+
+.top-bar {
+	background: transparentize(white, .7) !important;
+}
+
 .fixed {
 	border-bottom: 1px solid black !important;
-
+	
 	.name h1 {
 		font-family: 'Over the Rainbow', cursive;
 		font-size: 16pt !important;
 		
 		a:hover {
-			background: white !important;
+			background: transparentize(white, .7) !important;
 			color: black !important;
 		}
 	}
 }
 
-.button {
-	background-color: #0C92BD;
+input[type='submit'] {
+	background-color: $coreblue !important;
+
+	&:hover {
+		background-color: $dkblue !important;
+	}
 }
 
 .breadcrumbs {
@@ -73,7 +92,7 @@ body {
 	@extend %bar;
 	position: relative;
 	height: 400px;
-	background: lightgray;
+	background: $ltgray;
 }
 
 
@@ -90,7 +109,6 @@ body {
 }
 .title {
 	font-size: 24pt;
-	font-family: 'Over the Rainbow', cursive;
 	position: relative;
 	top: $col-width/8*(-1);
 	width: 100%;
@@ -197,7 +215,7 @@ body {
 .bar4 {
 	@extend %bar;
 	//height: 1200px;
-	background: darkgray;
+	background: $dkgray;
 	padding: 4%;
 	padding-top: 0%;
 	border-bottom: 2px solid gray;
@@ -216,32 +234,26 @@ body {
 	padding-right: 5px;
 }
 
-#signup {
-	background-color: transparentize(#25321A, .1);
-
-	&:hover {
-		background-color: #008cba;
-	}
-}
-
 .wallpaper {
 	position: relative;
-	height: 550px;
+	top: -50px;
+	height: 600px;
+	margin-bottom: -50px;
 	background: url('/assets/SimoneAnne-0023.jpg') no-repeat;
 	background-size: cover;
 }
 
 .wallpaper-login {
 	@extend .wallpaper;
-	height: 100vh;
+	min-height: 100vh;
 }
 
 .footer {
+	position: absolute;
 	font-size: 8pt;
-	top: 90vh !important;
+	bottom: 0px;
 	margin: 0 auto;
 	width: 100%;
-	margin-top: 20px;
 	border-top: 1px solid black;
 	padding: 5px;
 	background: white;
@@ -253,7 +265,11 @@ body {
 	border-bottom: 0 !important;
 	font-family: 'Alegreya Sans SC', sans-serif;
 	font-weight: 300;
+}
 
+.clear-footer {
+	@extend .footer;
+	background: transparentize(white, .7) !important;
 }
 
 .featured-art {

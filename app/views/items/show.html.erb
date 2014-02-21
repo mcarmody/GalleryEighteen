@@ -1,25 +1,12 @@
 <p id="notice"><%= notice %></p>
+<div class="item-container">
+	  <div class="display-pic"><%= image_tag (@item.pic)%>
+	  <div class="show-title"><%= @item.title %></div><div class='show-price'>$<%= @item.price %></div></div>
+	<div class='show-detail'>
+	  <%= @item.details %>
+	</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @item.title %>
-</p>
-
-<p>
-  <strong>Details:</strong>
-  <%= @item.details %>
-</p>
-
-
-<p>
-  <strong>Picture:</strong>
-  <%= image_tag (@item.pic) %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @item.price %>
-</p>
+</div>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>

@@ -1,9 +1,21 @@
 <div class="container">
-	<div class="form">
-		<%= @user.email %>
+	<div class="user-wallpaper">
+		<div class="profile">
 
-		<%= form_for @user do |f| %>
-		  <%= f.file_field :picture %>
-		<% end %>
+			<% provide(:title, @user.name) %>
+			<h1 class='gravatar'>
+				<%= gravatar_for @user %>
+				<%= @user.name %>
+			</h1>
+
+			<%= @user.name %>
+			<%= @user.email %>
+
+
+
+			<!-- Form upload, doesn't function yet <%= form_for @user do |f| %>
+			  <%= f.file_field :picture %>
+			<% end %> -->
+		</div>
 	</div>
 </div>
