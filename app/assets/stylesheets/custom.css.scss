@@ -5,7 +5,6 @@ $col-width: 12vw;
 
 body {
 	background-color: white !important;
-	padding-bottom: 35px !important;
 }
 
 .fixed {
@@ -239,14 +238,13 @@ body {
 
 .footer {
 	font-size: 8pt;
-	position: fixed;
-	top: 90vh;
+	top: 90vh !important;
 	margin: 0 auto;
 	width: 100%;
 	margin-top: 20px;
-	border-top: 2px solid transparentize(gray, .3);
+	border-top: 1px solid black;
 	padding: 5px;
-	background: transparentize(gray, .6);
+	background: white;
 	height: 50px;
 	font-size: 12pt;
 	text-align: center;

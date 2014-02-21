@@ -19,9 +19,10 @@ $item-width: 220px;
 	font-family: 'Alegreya Sans', sans-serif;
 	font-weight: 300;
 	cursor: pointer;
+	border-radius: 0px !important;
 
 	img {
-		border-radius: 5px !important;
+		//border-radius: 5px !important;
 	}
 
 	.art-label {
