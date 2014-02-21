@@ -31,27 +31,32 @@ $(function(){
 
   $('#masonry-container').masonry({
     itemSelector: '.box',
-    //columnWidth: 259,
-    //gutterWidth: 5
   });
 
 });
 
+//fade-out on hover over featured category
+$(function() {
+	$('.store-container').mouseleave(function() {
+		$(this).find('.item').css('opacity', '1');
+	});
+});
+
 $(function() {
 	$('.item').mouseenter(function() {
-		$(this).find('.details').css('display', 'inline-block');
+		$(this).siblings('.item').css('opacity', '.5');
+		$(this).find('.art-label').css('display', 'inline');
+		$(this).css('opacity', '1');
 	});
 	$('.item').mouseleave(function() {
-		$(this).find('.details').css('display', 'none');
+		$(this).css('opacity', '.5');
+		$(this).find('.art-label').css('display', 'none');
 	});
 });
 
 
 //fade-out on hover over featured category
 $(function() {
-	// $('.featured-art').mouseenter(function() {
-	// 	$(this).find('.featured').css('opacity', '.5');
-	// });
 	$('.featured-art').mouseleave(function() {
 		$(this).find('.featured').css('opacity', '1');
 	});

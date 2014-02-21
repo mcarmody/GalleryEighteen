@@ -4,7 +4,22 @@
 $col-width: 12vw;
 
 body {
-	background-color: darkgray !important;
+	background-color: white !important;
+	padding-bottom: 35px !important;
+}
+
+.fixed {
+	border-bottom: 1px solid black !important;
+
+	.name h1 {
+		font-family: 'Over the Rainbow', cursive;
+		font-size: 16pt !important;
+		
+		a:hover {
+			background: white !important;
+			color: black !important;
+		}
+	}
 }
 
 .button {
