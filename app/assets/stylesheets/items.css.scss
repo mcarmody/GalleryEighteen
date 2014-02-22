@@ -10,7 +10,7 @@ $dkblue: #457399;
 $item-width: 220px;
 
 body {
-	background: $ltgray !important;
+	background: white !important;
 	height: 100%;
 	min-height: 100vh;
 }
@@ -31,10 +31,6 @@ body {
 	font-weight: 300;
 	cursor: pointer;
 	border-radius: 0px !important;
-
-	img {
-		//border-radius: 5px !important;
-	}
 
 	.art-label {
 		position: absolute;
@@ -64,57 +60,98 @@ body {
 	}
 }
 
-.side-nav {
-	position: fixed;
-	margin-top: 30px;
-	width: 70px;
-	box-shadow: 0 0 2px black;
-	padding: 5px;
-}
-
 
 .item-container {
-	padding-bottom: 5px;
 	position: relative;
-	top: 40px !important;
+	top: 10px !important;
 	margin: 0 auto;
 	box-shadow: 0px 0px 2px black;
-	border-radius: 2px;
 	background: white;
 	font-family: 'Alegreya Sans SC', sans-serif;
 	line-height: 20px;
 	font-size: 12pt;
 	font-weight: 300;
-	max-width: 300px;
+	max-width: 600px;
+	max-height: 400px;
+	overflow: hidden;
+	
+	img {
+		margin: 0;
+		position: relative;
+		width: 50%;
+		margin-right: -3px;
+		border-right: 1px solid $ltgray;
+	}
+
 }
 
-.display-pic {
-	img {
-	}
+.show-info {
+	position: relative;
+	float: right;
+	width: 50%;
 }
 
 .show-title {
 	position: relative;
 	float: left;
-	padding: 2px;
+	padding: 3px;
 	font-size: 18pt;
-	top: -23px;
-	line-height: 19px;
-	width: 50%;
-	color: white;
-	margin-bottom: -18px;
+	width: 75%;
+	color: white !important;
 	background: transparentize(black, .5);
 }
 
 .show-price {
 	@extend .show-title;
+	width: 25%;
 	float: right;
 	text-align: right;
 }
 
-.show-detail {
-	padding: 5px 8px 2px 8px;
+.show-details {
+	position: relative;
+	padding: 10px;
+	top: 5px;
 }
+
+.show-creator {
+	position: absolute;
+	right: 0px;
+	bottom: 5px;
+	text-align: right;
+	width: 25%;
+	padding-right: 10px;
+	font-size: 10pt;
+}
+
+.follow {
+	position: absolute;
+	right: -10px;
+	bottom: 5px;
+	width: 50%;
+	float: right;
+
+	a:hover {
+		color: $dkblue;
+		background: transparent !important;
+		text-shadow: 0 0 1px $dkgray;
+	}
+}
+
+.back-link {
+	position: relative;
+	top: 10px;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 600px;
+	color: black;
+
+	a:hover {
+		color: $dkblue;
+		background: transparent;
+	}
+}
+
 
 
 
