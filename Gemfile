@@ -18,7 +18,7 @@ end
 gem "will_paginate", "~> 3.0.4"
 
 # Gemfile
-gem 'paperclip'
+gem 'paperclip', '~> 4.1'
 gem 'aws-sdk'
 
 # Use SCSS for stylesheets
@@ -49,6 +49,7 @@ gem 'devise'
 
 #oauth (various)
 gem 'omniauth-twitter', :github => 'arunagw/omniauth-twitter'
+gem 'omniauth-facebook'
 
 #foundation
 gem 'foundation-rails'
