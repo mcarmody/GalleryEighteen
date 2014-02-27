@@ -66,18 +66,18 @@ $formcolor:transparentize(white, .4);
 .email-list {
 	font-family: 'Over the Rainbow', cursive;
 	transition: 200ms;
-	line-height: 12px;
+	line-height: 6px;
 	display: block;
 	margin: 0 auto;
 	border: 1px solid gray;
 	width: 200px;
-	background: #008cba;
+	background: $midblue;
 	font-size: 12pt;
 	height: 40px;
 	color: white;
 
 	&:hover {
-		background: darken(#008cba, 10%);
+		background: $dkblue;
 	}
 }
 

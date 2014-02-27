@@ -18,3 +18,8 @@ Item.destroy_all
   Item.create(title: "Country Road", details: "deets", price: 300, pic: 'SimoneAnne-8325.jpg', artist: 'Mike Carmody')
   Item.create(title: "Pathways", details: "deets", price: 300, pic: 'SimoneAnne-6289.jpg', artist: 'Mike Carmody')
 end
+
+User.destroy_all
+
+User.create(name: 'Mike Carmody', password: 'password', email: 'mcarmody2013@gmail.com')
+User.create(name: 'A Less Cool User', password: 'password', email: 'sample@example.com')

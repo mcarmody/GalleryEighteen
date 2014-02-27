@@ -4,6 +4,15 @@ class User < ActiveRecord::Base
 	devise :database_authenticatable, :registerable,
         :recoverable, :validatable, :rememberable, :trackable, :omniauthable, :omniauth_providers => [:twitter]
 
+    has_many :relationships, foreign_key: "follower_id", dependent: :destroy
+    has_many :followed_users, through: :relationships, source: :followed
+
+    has_many :reverse_relationships, foreign_key: "followed_id",
+                                   class_name:  "Relationship",
+                                   dependent:   :destroy
+    has_many :followers, through: :reverse_relationships, source: :follower
+    has_many :items, dependent: :destroy
+
 	def self.find_for_twitter_oauth(auth)
 	  where(auth.slice(:provider, :uid)).first_or_create do |user|
 	      user.provider = auth.provider
@@ -22,6 +31,18 @@ class User < ActiveRecord::Base
 	        user.email = data["email"] if user.email.blank?
 	      end
 	    end
+	end
+
+	def following?(other_user)
+		relationships.find_by(followed_id: other_user.id)
+	end
+
+	def follow!(other_user)
+		relationships.create!(followed_id: other_user.id)
+	end
+
+	def unfollow!(other_user)
+	    relationships.find_by(followed_id: other_user.id).destroy
 	end
 
 	def addToEmailList

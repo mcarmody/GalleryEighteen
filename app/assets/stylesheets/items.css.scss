@@ -13,6 +13,17 @@ body {
 	background: white !important;
 	height: 100%;
 	min-height: 100vh;
+	overflow: hidden;
+}
+
+.bg-img {
+	position: absolute;
+	filter: blur(10px);
+	-webkit-filter: blur(10px);
+	-moz-filter: blur(10px);
+	-o-filter: blur(10px);
+	-ms-filter: blur(10px);
+	bottom: 0px;
 }
 
 .store-container {
@@ -74,6 +85,7 @@ body {
 	max-width: 600px;
 	max-height: 400px;
 	overflow: hidden;
+	box-shadow: 0 0 70px 6px black;
 	
 	img {
 		margin: 0;
@@ -81,6 +93,7 @@ body {
 		width: 50%;
 		margin-right: -3px;
 		border-right: 1px solid $ltgray;
+		bottom: 0px;
 	}
 
 }
@@ -144,11 +157,23 @@ body {
 	margin: 0 auto;
 	width: 100%;
 	max-width: 600px;
-	color: black;
+	color: white;
 
-	a:hover {
-		color: $dkblue;
-		background: transparent;
+	a {
+
+		&:hover {
+			color: $dkblue;
+			background: transparent;
+		}
+
+		&:visited {
+			color: white;
+
+			&:hover {
+				color: $dkblue;
+				background: transparent;
+			}
+		}
 	}
 }
 

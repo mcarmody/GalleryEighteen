@@ -1,0 +1,18 @@
+<div class="profile">
+
+	<% provide(:title, @user.name) %>
+	<h1 class='gravatar'>
+		<%= gravatar_for @user %>
+	</h1>
+
+	<div class="user-name"><%= @user.name %></div>
+	<div class="user-email"><%= mail_to @user.email, name = nil, html_options = {:subject => 'Contact via HSArt.com'} %></div>
+
+	<!--followers and followed users counts -->
+	<%= render 'stats' %>
+
+	<%= render 'follow_form' %>
+
+</div>
+
+<div class='map' id='map'></div>

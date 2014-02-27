@@ -1,21 +1,15 @@
 <div class="container">
 	<div class="user-wallpaper">
-		<div class="profile">
+		<% if flash[:alert] %>
+		    <div class="notice"><%= flash[:alert] %> <%= @user.email %></div>
+	 	<% end %>
 
-			<% provide(:title, @user.name) %>
-			<h1 class='gravatar'>
-				<%= gravatar_for @user %>
-				<%= @user.name %>
-			</h1>
-
-			<%= @user.name %>
-			<%= @user.email %>
-
-
-
-			<!-- Form upload, doesn't function yet <%= form_for @user do |f| %>
-			  <%= f.file_field :picture %>
-			<% end %> -->
+		<% if current_user == @user %>
+			<%= render 'profile' %>
+		<% else %>
+			<%= render 'other_user' %>
+		<% end %>
+		
 		</div>
 	</div>
 </div>

@@ -14,6 +14,9 @@ group :production do
 	gem 'rails_12factor'
 end
 
+#pagination
+gem "will_paginate", "~> 3.0.4"
+
 # Gemfile
 gem 'paperclip'
 gem 'aws-sdk'

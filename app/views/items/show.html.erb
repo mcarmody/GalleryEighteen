@@ -1,15 +1,17 @@
-<p id="notice"><%= notice %></p>
-<div class="item-container">
-	<%= image_tag (@item.pic)%>
-		
-	<div class='show-info'>
-	  <div class="show-title"><%= @item.title %></div>
-	  <div class='show-price'>$<%= @item.price %></div>
-	  <div class="show-details"><%= @item.details %></div>
+	<%= image_tag (@item.pic), :class => "bg-img" %>
+	<p id="notice"><%= notice %></p>
+	<div class="item-container">
+		<%= image_tag (@item.pic)%>
+			
+		<div class='show-info'>
+		  <div class="show-title"><%= @item.title %></div>
+		  <div class='show-price'>$<%= @item.price %></div>
+		  <div class="show-details"><%= @item.details %></div>
+		</div>
+
+		<div class="show-creator">Creator: <b><%= @item.artist %></b></div>
+		<div class="follow"><%= link_to 'Follow this Artist'%></div>
 	</div>
 
-	<div class="show-creator">Creator: <b><%= @item.artist %></b></div>
-	<div class="follow"><%= link_to 'Follow this Artist' %></div>
-</div>
-
 	<div class="back-link">&larr; <%= link_to 'Back to Browsing', items_path %></div>
+</div>

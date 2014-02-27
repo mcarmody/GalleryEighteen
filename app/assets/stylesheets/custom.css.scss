@@ -344,7 +344,8 @@ input[type='submit'] {
 	font-weight: 300;
 	
 	a:hover {
-		color: white;
+		color: $dkblue;
 		background: transparent;
+		text-shadow: 0 0 1px $dkgray;
 	}
 }

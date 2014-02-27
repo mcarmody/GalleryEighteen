@@ -24,16 +24,30 @@ $dkblue: #457399;
 	img {
 		border: 1px solid black;
 	}
+
 }
 
-.profile {
-	padding: 40px;
-	padding-top: 20px;
-	padding-right: 10px;
-	padding-bottom: 20px;
+.user-name {
+	font-weight: bold;
+}
+
+.user-email {
+	position: relative;
+	margin-bottom: 10px;
+
+	a:hover {
+		text-decoration: none;
+		background: transparent;
+		color: $dkblue;
+	}
+
+}
+
+.other_user {
+	padding: 20px 40px;
 	position: relative;
 	top: 80px !important;
-	width: 350px;
+	width: 320px;
 	margin: 0 auto;
 	background: white;
 	border: 1px solid black;
@@ -41,4 +55,68 @@ $dkblue: #457399;
 	line-height: 20px;
 	font-size: 12pt;
 	font-weight: 300;
+	height: 260px;
 }
+
+
+.profile {
+	@extend .other_user;
+	float: left;
+	margin: 20px;
+	height: 220px;
+	top: 0px !important;
+}
+
+.stats {
+	position: relative;
+	width: 100% !important;
+	margin: 0 auto;
+	height: 40px;
+	padding: 0px;
+	display: block;
+
+	div a {
+		font-size: 12pt;
+		float: left;
+		color: $dkgray;
+		
+		&:hover {
+			color: $dkblue;
+			background: transparent;
+			text-shadow: 0 0 1px $dkgray;
+
+			strong {
+				color: black;
+				text-shadow: none;
+			}
+		}
+	}
+
+}
+	#followers a {
+		margin: 0 25px;
+	}
+
+.new_relationship {
+	position: relative;
+	width: 100%;
+	bottom: -10px;
+	height: 30px;
+}
+
+.follow-button {
+	position: relative;
+	font-family: 'Over the Rainbow', cursive;
+	transition: 200ms;
+	line-height: 12px;
+	display: block;
+	margin: 0 auto;
+	padding: 0 !important;
+	border: 1px solid gray;
+	width: 80px;
+	font-size: 12pt;
+	height: 30px;
+	color: white;
+}
+
+
