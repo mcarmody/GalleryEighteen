@@ -63,7 +63,7 @@ $dkblue: #457399;
 	@extend .other_user;
 	float: left;
 	margin: 20px;
-	height: 220px;
+	height: 225px;
 	top: 0px !important;
 }
 
@@ -119,4 +119,21 @@ $dkblue: #457399;
 	color: white;
 }
 
+.location-input {
+	position: relative;
+	margin: 10px 0 20px 0 !important;
+	width: 180px !important;
+}
+
+.following-updates {
+	width: 600px;
+	max-width: 50%;
+	height: 80vh;
+	margin: 20px 20px 20px 0;
+	position: absolute;
+	right: 0px;
+	background: white;
+	border: 1px solid black;
+	overflow: hidden;
+}
 

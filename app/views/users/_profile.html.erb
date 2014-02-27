@@ -16,3 +16,32 @@
 </div>
 
 <div class='map' id='map'></div>
+
+<!-- Start javascripting for the map... needs to be moved to separate files much later on -->
+
+<script type='text/javascript'>
+	var startLat = "<%= @user.location.split(',').first.to_f %>"
+	var startLong = "<%= @user.location.split(',').second.to_f %>"
+	var code = 'madcarmody.hd0dcpom'
+	var startCoords = [startLat, startLong]
+	var map = L.mapbox.map('map', code).setView(startCoords, 13);
+	map.addControl(L.mapbox.geocoderControl(code));
+
+	L.mapbox.featureLayer({
+    // this feature is in the GeoJSON format: see geojson.org
+    // for the full specification
+    type: 'Feature',
+    geometry: {
+        type: 'Point',
+        coordinates: [startLong, startLat]
+    },
+    properties: {
+        title: "<%= @user.name %>",
+        description: 'You are here',
+        // one can customize markers by adding simplestyle properties
+        // http://mapbox.com/developers/simplestyle/
+        'marker-size': 'large',
+        'marker-color': '#457399'
+    }
+	}).addTo(map);
+</script>

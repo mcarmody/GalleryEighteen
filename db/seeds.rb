@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Item.destroy_all
+User.destroy_all
 
 2.times do 
   Item.create(title: "Lilypads", details: "deets", price: 100, pic: 'SimoneAnne-6292.jpg', artist: 'Mike Carmody')
@@ -21,5 +22,5 @@ end
 
 User.destroy_all
 
-User.create(name: 'Mike Carmody', password: 'password', email: 'mcarmody2013@gmail.com')
-User.create(name: 'A Less Cool User', password: 'password', email: 'sample@example.com')
+User.create(name: 'Mike Carmody', password: 'password', email: 'mcarmody2013@gmail.com', location: '40.05337,-87.688022')
+User.create(name: 'A Less Cool User', password: 'password', email: 'sample@example.com', location: '44.05337,-87.688022')

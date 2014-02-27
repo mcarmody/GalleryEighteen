@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" ng-controller="UserCtrl">
 	<div class="user-wallpaper">
 		<% if flash[:alert] %>
 		    <div class="notice"><%= flash[:alert] %> <%= @user.email %></div>
@@ -6,6 +6,7 @@
 
 		<% if current_user == @user %>
 			<%= render 'profile' %>
+			<%= render 'following' %>
 		<% else %>
 			<%= render 'other_user' %>
 		<% end %>
@@ -13,3 +14,4 @@
 		</div>
 	</div>
 </div>
+

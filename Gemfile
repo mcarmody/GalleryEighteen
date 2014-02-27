@@ -48,7 +48,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'devise'
 
 #oauth (various)
-gem 'omniauth-twitter'
+gem 'omniauth-twitter', :github => 'arunagw/omniauth-twitter'
 
 #foundation
 gem 'foundation-rails'
