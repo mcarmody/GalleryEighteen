@@ -6,4 +6,12 @@
 	top: 280px;
 	left: 0px;
 	margin: 20px;
+	transition: 200ms;
+}
+
+.map-info-container {
+	a:hover {
+		background: transparent;
+		text-decoration: none;
+	}
 }
