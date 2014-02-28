@@ -29,16 +29,14 @@ $formcolor:transparentize(white, .4);
 	}
 
 	.forgot {
-		font-family: 'Over the Rainbow', cursive;
 		float: right;
-		font-size: 10pt;
+		font-size: 10.5pt;
 		margin-right: 35px;
 	}
 
 	.signup {
-		font-family: 'Over the Rainbow', cursive;
 		float: left;
-		font-size: 10pt;
+		font-size: 10.5pt;
 		margin-left: 35px;
 	}
 
@@ -91,7 +89,12 @@ $formcolor:transparentize(white, .4);
 	display: block;
 	width: 80%;
 	margin: 0 auto;
-	//border: 1px solid gray;
+	font-family: 'Alegreya Sans SC', sans-serif;
+
+	input {
+		font-family: 'Alegreya Sans SC', sans-serif;
+	}
+	
 
 }
 
