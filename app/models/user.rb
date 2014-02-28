@@ -49,6 +49,5 @@ class User < ActiveRecord::Base
 	end
 
 	def addToEmailList
-		
 	end
 end
