@@ -22,5 +22,5 @@ end
 
 User.destroy_all
 
-User.create(name: 'Mike Carmody', password: 'password', email: 'mcarmody2013@gmail.com', location: '40.05337,-87.688022', category: 'Photography')
+User.create(name: 'Mike Carmody', password: 'password', email: 'mcarmody2013@gmail.com', location: '40.05337,-87.688022', category: 'Photography', pic: 'profile.jpg')
 User.create(name: 'A Less Cool User', password: 'password', email: 'sample@example.com', location: '44.05337,-87.688022', category: 'Painting')

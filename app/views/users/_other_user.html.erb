@@ -1,11 +1,10 @@
 <div class="other_user">
 
 	<% provide(:title, @user.name) %>
-	<h1 class='gravatar'>
-		<%= gravatar_for @user %>
-	</h1>
+	<%= image_tag @user.avatar.url(:medium) %>
 
 	<div class="user-name"><%= @user.name %></div>
+	<div class="interests">Mainly interested in <%=@user.category%></div>
 	<div class="user-email"><%= mail_to @user.email, name = nil, html_options = {:subject => 'Contact via HSArt.com'} %></div>
 
 	<!--followers and followed users counts -->

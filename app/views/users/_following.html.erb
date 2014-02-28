@@ -1,5 +1,6 @@
 <div class="following-updates">
-	<%= @user.followed_users.each do |user|
-			
-		end %>
+	<%= @user.followed_users.each do |user| %>
+		<div class="follow-icon"><%= image_tag user.avatar %></div>
+		<%= link_to user.name, user %>, interested in <%= user.category %>
+	<% end %>
 </div>

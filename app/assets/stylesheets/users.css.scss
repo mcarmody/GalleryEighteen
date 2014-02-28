@@ -51,7 +51,7 @@ $dkblue: #457399;
 }
 
 .other_user {
-	padding: 20px 40px;
+	padding: 20px 20px;
 	position: relative;
 	top: 80px !important;
 	width: 320px;
@@ -62,7 +62,18 @@ $dkblue: #457399;
 	line-height: 20px;
 	font-size: 12pt;
 	font-weight: 300;
-	height: 260px;
+	height: 230px;
+
+	img {
+		position: relative;
+		height: 120px;
+		width: 120px;
+		float: left;
+		padding-right: 10px;
+		padding-bottom: 5px;
+		overflow: hidden;
+		border-radius: 300px !important;
+	}
 }
 
 
@@ -72,19 +83,12 @@ $dkblue: #457399;
 	margin: 20px;
 	height: 225px;
 	top: 0px !important;
-
-	img {
-		height: 120px;
-		width: 120px;
-		float: left;
-		padding-right: 5px;
-		padding-bottom: 5px;
-	}
 }
 
 .stats {
 	position: relative;
-	width: 100% !important;
+	width: 100%;
+	float: left;
 	margin: 0 auto;
 	height: 40px;
 	padding: 0px;
@@ -108,13 +112,8 @@ $dkblue: #457399;
 	}
 }
 
-	#user_avatar {
-		position: absolute;
-		z-index: 10;
-	}
-
 	#followers a {
-		margin: 0 25px;
+		margin: 0 47px;
 	}
 
 .new_relationship {
@@ -128,6 +127,8 @@ $dkblue: #457399;
 	position: relative;
 	font-family: 'Over the Rainbow', cursive;
 	transition: 200ms;
+	bottom: -70px;
+	left: -54px;
 	line-height: 12px;
 	display: block;
 	margin: 0 auto;

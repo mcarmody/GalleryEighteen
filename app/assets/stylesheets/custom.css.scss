@@ -8,6 +8,21 @@ $midblue: #5a8db6;
 $dkblue: #457399;
 $col-width: 12vw;
 
+.notice {
+	max-width: 450px;
+	// border: 1px solid black;
+	// background: white;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	margin: 0 auto;
+	position: relative;
+	top: 20px;
+	margin-bottom: -20px;
+	color: white;
+	font-size: 14pt;
+	padding: 5px;
+	text-align: center;
+}
+
 body {
 	background-color: white !important;
 }
@@ -37,7 +52,7 @@ body {
 }
 
 input[type='submit'] {
-	background-color: $coreblue !important;
+	background-color: $midblue !important;
 
 	&:hover {
 		background-color: $dkblue !important;
