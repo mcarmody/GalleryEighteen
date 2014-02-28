@@ -1,8 +1,14 @@
+$dkgray: #bbbbbb;
+$ltgray: #d5d5d5;
+$coreblue: #7da6c7;
+$midblue: #5a8db6;
+$dkblue: #457399;
+
 .map {
 	width: 320px;
 	height: 320px;
 	position: absolute;
-	border: 1px solid black;
+	border: 1px solid $dkgray;
 	top: 280px;
 	left: 0px;
 	margin: 20px;

@@ -9,18 +9,19 @@
 Item.destroy_all
 User.destroy_all
 
-2.times do 
-  Item.create(title: "Lilypads", details: "deets", price: 100, pic: 'SimoneAnne-6292.jpg', artist: 'Mike Carmody')
-  Item.create(title: "Beach Glass", details: "deets", price: 300, pic: 'SimoneAnne-1862.jpg', artist: 'Mike Carmody')
-  Item.create(title: "Surfer Dude", details: "deets", price: 300, pic: 'SimoneAnne-8689.jpg', artist: 'Mike Carmody')
-  Item.create(title: "Sunshine", details: "deets", price: 300, pic: 'SimoneAnne-1834.jpg', artist: 'Mike Carmody')
-  Item.create(title: "Gondola Ride", details: "deets", price: 300, pic: 'SimoneAnne-0180.jpg', artist: 'Mike Carmody')
-  Item.create(title: "Another Beach", details: "deets", price: 300, pic: 'SimoneAnne-1871.jpg', artist: 'Mike Carmody')
-  Item.create(title: "Country Road", details: "deets", price: 300, pic: 'SimoneAnne-8325.jpg', artist: 'Mike Carmody')
-  Item.create(title: "Pathways", details: "deets", price: 300, pic: 'SimoneAnne-6289.jpg', artist: 'Mike Carmody')
+1.times do 
+  Item.create(title: "Lilypads", details: "deets", price: 100, pic: 'SimoneAnne-6292.jpg', user_id: 1)
+  Item.create(title: "Beach Glass", details: "deets", price: 300, pic: 'SimoneAnne-1862.jpg', user_id: 1)
+  Item.create(title: "Surfer Dude", details: "deets", price: 300, pic: 'SimoneAnne-8689.jpg', user_id: 1)
+  Item.create(title: "Sunshine", details: "deets", price: 300, pic: 'SimoneAnne-1834.jpg', user_id: 2)
+  Item.create(title: "Gondola Ride", details: "deets", price: 300, pic: 'SimoneAnne-0180.jpg', user_id: 2)
+  Item.create(title: "Another Beach", details: "deets", price: 300, pic: 'SimoneAnne-1871.jpg', user_id: 2)
+  Item.create(title: "Country Road", details: "deets", price: 300, pic: 'SimoneAnne-8325.jpg', user_id: 3)
+  Item.create(title: "Pathways", details: "deets", price: 300, pic: 'SimoneAnne-6289.jpg', user_id: 3)
 end
 
 User.destroy_all
 
-User.create(name: 'Mike Carmody', password: 'password', email: 'mcarmody2013@gmail.com', location: '40.05337,-87.688022', category: 'Photography', pic: 'profile.jpg')
-User.create(name: 'A Less Cool User', password: 'password', email: 'sample@example.com', location: '44.05337,-87.688022', category: 'Painting')
+User.create(name: 'Mike Carmody', password: 'password', email: 'mcarmody2013@gmail.com', location: 'Evanston High School', category: 'Photography', pic: 'profile.jpg', id: 1)
+User.create(name: 'Josh Wood', password: 'password', email: 'sample@example.com', location: 'New Trier High School', category: 'Architecture', pic: 'wood_josh.jpg', id: 2)
+User.create(name: 'Barack Obama', password: 'password', email: 'sample@example.com', location: 'Glenbrook South High School', category: 'Painting', pic: 'obama.jpg', id: 3)

@@ -17,7 +17,7 @@
 <div class='map' id='map'></div>
 
 <!-- Start javascripting for the map... needs to be moved to separate files much later on -->
-
+<% unless @user.location == nil %>
 <script type='text/javascript'>
 	var startLat = "<%= @user.location.split(',').first.to_f %>"
 	var startLong = "<%= @user.location.split(',').second.to_f %>"
@@ -44,3 +44,4 @@
     }
 	}).addTo(map);
 </script>
+<% end %>

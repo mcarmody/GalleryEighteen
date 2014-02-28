@@ -1,0 +1,6 @@
+<div class="user-gallery">
+	<% @user.items.each do |item| %>
+		<%= image_tag item.pic %>
+		<%= link_to item.title, item %>
+	<% end %>
+</div>

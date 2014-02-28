@@ -8,13 +8,6 @@ $coreblue: #7da6c7;
 $midblue: #5a8db6;
 $dkblue: #457399;
 
-.user-wallpaper {
-	@extend .wallpaper;
-	background: url('SimoneAnne-0023.jpg');
-	background-position: cover;
-	height: 93vh;
-}
-
 .gravatar {	
 	display: block;
 	position: relative;
@@ -57,7 +50,7 @@ $dkblue: #457399;
 	width: 320px;
 	margin: 0 auto;
 	background: white;
-	border: 1px solid black;
+	border: 1px solid $dkgray;
 	font-family: 'Alegreya Sans SC', sans-serif;
 	line-height: 20px;
 	font-size: 12pt;
@@ -134,7 +127,7 @@ $dkblue: #457399;
 	display: block;
 	margin: 0 auto;
 	padding: 0 !important;
-	border: 1px solid gray;
+	border: 1px solid $dkgray;
 	width: 80px;
 	font-size: 12pt;
 	height: 30px;
@@ -150,15 +143,15 @@ $dkblue: #457399;
 //following users updates
 
 .following-updates {
+	position: relative;
 	padding: 20px;
-	width: 600px;
-	max-width: 50%;
+	width: 400px;
+	max-width: 30%;
 	height: 553px;
 	margin: 20px 20px 20px 0;
-	position: absolute;
-	left: 360px;
+	float: left;
 	background: white;
-	border: 1px solid black;
+	border: 1px solid $dkgray;
 	overflow: hidden;
 }
 
@@ -174,7 +167,6 @@ $dkblue: #457399;
 .follow-icon {
 	display: inline;
 
-
 	img {
 		border: 1px solid $dkgray;
 		border-radius: 25px;
@@ -182,4 +174,6 @@ $dkblue: #457399;
 		height: 50px !important;
 	}
 }
+
+
 

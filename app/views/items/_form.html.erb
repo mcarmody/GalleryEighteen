@@ -27,6 +27,7 @@
     <%= f.label :pic %><br>
     <%= f.text_area :pic %>
   </div>
+  <%= f.hidden_field :user_id, value: current_user.id %>
   <div class="actions">
     <%= f.submit %>
   </div>

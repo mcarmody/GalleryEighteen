@@ -1,0 +1,19 @@
+$dkgray: #bbbbbb;
+$ltgray: #d5d5d5;
+$coreblue: #7da6c7;
+$midblue: #5a8db6;
+$dkblue: #457399;
+
+.user-gallery {
+	position: relative;
+	padding: 20px;
+	width: 30%;
+	min-width: 320px;
+	max-width: 100%;
+	height: 553px;
+	margin: 20px 20px 20px 0;
+	float: left;
+	background: white;
+	border: 1px solid $dkgray;
+	overflow: hidden;
+}

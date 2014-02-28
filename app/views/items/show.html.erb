@@ -1,4 +1,4 @@
-	<%= image_tag (@item.pic), :class => "bg-img" %>
+	<%= image_tag @item.pic, :class => "bg-img" %>
 	<p id="notice"><%= notice %></p>
 	<div class="item-container">
 		<%= image_tag (@item.pic)%>
@@ -9,8 +9,13 @@
 		  <div class="show-details"><%= @item.details %></div>
 		</div>
 
-		<div class="show-creator">Creator: <b><%= @item.artist %></b></div>
-		<div class="follow"><%= link_to 'Follow this Artist'%></div>
+		<div class="show-creator">Creator: <b><%= link_to @item.user.name, user_url(@item.user) %></b></div>
+		
+		<% unless current_user.following?(@item.user) %>
+		<%= form_for(current_user.relationships.build(followed_id: @item.user.id)) do |f| %><div><%= f.hidden_field :followed_id %></div>
+		  <%= f.submit "Follow this user", class: "follow" %>
+		<% end %>
+		<% end %>
 	</div>
 
 	<div class="back-link">&larr; <%= link_to 'Back to Browsing', items_path %></div>
