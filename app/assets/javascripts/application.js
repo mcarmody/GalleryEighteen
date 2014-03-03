@@ -36,7 +36,7 @@ $(function(){
 
 });
 
-//fade-out on hover over featured category
+//fade-out on hover over browse item
 $(function() {
 	$('.store-container').mouseleave(function() {
 		$(this).find('.item').css('opacity', '1');
@@ -45,12 +45,27 @@ $(function() {
 
 $(function() {
 	$('.item').mouseenter(function() {
-		//$(this).siblings('.item').css('opacity', '.5');
 		$(this).find('.art-label').css('display', 'inline');
 		$(this).css('opacity', '1');
 	});
 	$('.item').mouseleave(function() {
-		//$(this).css('opacity', '.5');
+		$(this).find('.art-label').css('display', 'none');
+	});
+});
+
+//fade-out on hover over gallery item
+$(function() {
+	$('.user-gallery').mouseleave(function() {
+		$(this).find('.item-thumb').css('opacity', '1');
+	});
+});
+
+$(function() {
+	$('.item-thumb').mouseenter(function() {
+		$(this).find('.art-label').css('display', 'inline');
+		$(this).css('opacity', '1');
+	});
+	$('.item-thumb').mouseleave(function() {
 		$(this).find('.art-label').css('display', 'none');
 	});
 });
@@ -65,12 +80,10 @@ $(function() {
 
 $(function() {
 	$('.featured').mouseenter(function() {
-		//$(this).siblings('.featured').css('opacity', '.5');
 		$(this).find('label').css('display', 'inline');
 		$(this).css('opacity', '1');
 	});
 	$('.featured').mouseleave(function() {
-		//$(this).css('opacity', '.5');
 		$(this).find('label').css('display', 'none');
 	});
 });

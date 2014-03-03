@@ -22,6 +22,6 @@ end
 
 User.destroy_all
 
-User.create(name: 'Mike Carmody', password: 'password', email: 'mcarmody2013@gmail.com', location: 'Evanston High School', category: 'Photography', pic: 'profile.jpg', id: 1)
-User.create(name: 'Josh Wood', password: 'password', email: 'sample@example.com', location: 'New Trier High School', category: 'Architecture', pic: 'wood_josh.jpg', id: 2)
-User.create(name: 'Barack Obama', password: 'password', email: 'sample@example.com', location: 'Glenbrook South High School', category: 'Painting', pic: 'obama.jpg', id: 3)
+User.create(name: 'Mike Carmody', password: 'password', email: 'mcarmody2013@gmail.com', school: '42.047418, -87.700815', category: 'Photography', pic: 'profile.jpg', uid: 1)
+User.create(name: 'Josh Wood', password: 'password', email: 'sample@example.com', school: '42.095219, -87.717810', category: 'Architecture', pic: 'wood_josh.jpg', uid: 2)
+User.create(name: 'Barack Obama', password: 'password', email: 'sample@example.com', school: '42.095219, -87.717810', category: 'Painting', pic: 'obama.jpg', uid: 3)

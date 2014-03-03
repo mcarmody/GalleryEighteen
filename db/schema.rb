@@ -24,24 +24,6 @@ ActiveRecord::Schema.define(version: 20140227224145) do
     t.integer  "user_id"
   end
 
-  create_table "mailers", force: true do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "mailers", ["email"], name: "index_mailers_on_email", unique: true
-  add_index "mailers", ["reset_password_token"], name: "index_mailers_on_reset_password_token", unique: true
-
   create_table "mailing_lists", force: true do |t|
     t.string   "email"
     t.datetime "created_at"
@@ -79,7 +61,7 @@ ActiveRecord::Schema.define(version: 20140227224145) do
     t.string   "pic"
     t.string   "firstname"
     t.string   "lastname"
-    t.string   "location"
+    t.string   "school"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"

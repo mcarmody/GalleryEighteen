@@ -17,10 +17,10 @@
 <div class='map' id='map'></div>
 
 <!-- Start javascripting for the map... needs to be moved to separate files much later on -->
-<% unless @user.location == nil %>
+<% unless @user.school == nil %>
 <script type='text/javascript'>
-	var startLat = "<%= @user.location.split(',').first.to_f %>"
-	var startLong = "<%= @user.location.split(',').second.to_f %>"
+	var startLat = "<%= @user.school.split(',').first.to_f %>"
+	var startLong = "<%= @user.school.split(',').second.to_f %>"
 	var code = 'madcarmody.hd0dcpom'
 	var startCoords = [startLat, startLong]
 	var map = L.mapbox.map('map', code).setView(startCoords, 13);
@@ -35,8 +35,8 @@
         coordinates: [startLong, startLat]
     },
     properties: {
-        title: "<%= @user.name %>",
-        description: 'You are here',
+        title: "<%= @user.school %>",
+        description: 'Your School',
         // one can customize markers by adding simplestyle properties
         // http://mapbox.com/developers/simplestyle/
         'marker-size': 'large',

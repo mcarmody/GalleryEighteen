@@ -16,7 +16,13 @@
               <%= image_tag item.pic %>
               <div class="art-label">
                 <%= item.title %>
-                <div class="artist">by <%= item.artist %></div>
+                <div class="artist">by
+                  <% if item.user != nil %>
+                    <%= item.user.name %>
+                  <% else %>
+                    Anonymous
+                  <% end %>
+                </div>
               <% end %>
             </div>
           </div>
