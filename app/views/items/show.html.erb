@@ -9,12 +9,21 @@
 		  <div class="show-details"><%= @item.details %></div>
 		</div>
 
-		<div class="show-creator">Creator: <b><%= link_to @item.user.name, user_url(@item.user) %></b></div>
+		<div class="show-creator">Creator: <b>
+			<% if @item.user.name != nil %>
+				<%= link_to @item.user.name, user_url(@item.user) %>
+			<% else %>
+				Anonymous
+			<% end %>
+			</b></div>
 		
-		<% unless current_user.following?(@item.user) %>
-		<%= form_for(current_user.relationships.build(followed_id: @item.user.id)) do |f| %><div><%= f.hidden_field :followed_id %></div>
-		  <%= f.submit "Follow this user", class: "follow" %>
-		<% end %>
+		<% if @item.user.name != nil %>
+			<% unless current_user.following?(@item.user) %>
+				<%= form_for(current_user.relationships.build(followed_id: @item.user.id)) do |f| %><div><%= f.hidden_field :followed_id %></div>
+				  <%= f.submit "Follow this user", :class => "follow" %>
+				<% end %>
+			<% end %>
+		<% else %>
 		<% end %>
 	</div>
 

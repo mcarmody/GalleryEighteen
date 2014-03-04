@@ -1,0 +1,47 @@
+$dkgray: #bbbbbb;
+$ltgray: #d5d5d5;
+$coreblue: #7da6c7;
+$midblue: #5a8db6;
+$dkblue: #457399;
+
+//following users updates
+
+.following-updates {
+	position: relative;
+	//padding: 20px;
+	width: 400px;
+	max-width: 30%;
+	height: 553px;
+	margin: 20px 20px 20px 0;
+	float: left;
+	background: white;
+	overflow: hidden;
+
+	h4 {
+		min-width: 320px;
+		padding: 5px;
+	}
+}
+
+.followed-user {
+	a:hover {
+		background: transparent;
+		text-shadow: 0 0 1px $dkgray;
+		color: $dkblue;
+	}
+	
+	padding: 10px 0;
+	border-bottom: 1px solid $dkgray;
+}
+
+.follow-icon {
+	display: inline;
+	overflow: hidden;
+
+	img {
+		border: 1px solid $dkgray;
+		border-radius: 25px;
+		width: 50px;
+		height: 50px !important;
+	}
+}

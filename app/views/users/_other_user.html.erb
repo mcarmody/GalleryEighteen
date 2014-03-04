@@ -1,7 +1,7 @@
 <div class="other_user">
 
 	<% provide(:title, @user.name) %>
-	<%= image_tag @user.avatar.url(:medium) %>
+	<div class = "avatar"><%= image_tag @user.pic %></div>
 
 	<div class="user-name"><%= @user.name %></div>
 	<div class="interests">Mainly interested in <%=@user.category%></div>

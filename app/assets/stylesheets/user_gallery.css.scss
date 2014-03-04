@@ -5,15 +5,31 @@ $midblue: #5a8db6;
 $dkblue: #457399;
 
 .user-gallery {
+
+	h4 {
+		min-width: 320px;
+		padding: 5px;
+	}
+
 	position: relative;
 	padding: 0px;
 	width: 30%;
 	min-width: 320px;
 	max-width: 100%;
+	max-height: 500px;
 	height: 553px;
 	margin: 20px 20px 20px 0;
 	float: left;
 	background: white;
-	border: 1px solid $dkgray;
-	overflow: hidden;
+	overflow: none;
+
+	a {
+		float: right;
+
+		&:hover {
+			color: $dkblue;
+			background: transparent !important;
+			text-shadow: 0 0 1px $dkgray;
+		}
+	}
 }

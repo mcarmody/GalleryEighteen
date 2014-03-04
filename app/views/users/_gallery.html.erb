@@ -1,12 +1,15 @@
 <div class="user-gallery">
-	<% @user.items.each do |item| %>
-          <%= link_to item do %>
-            <div class="item-thumb box small-2 large-4 columns">
-              <%= image_tag item.pic %>
-              <div class="art-label">
-                <%= item.title %>
-              <% end %>
-            </div>
-          </div>
-        <% end %>
+  <h4>Recent Works</h4>
+	<% @user.items.order('created_at DESC').limit(4).each do |item| %>
+
+      <%= link_to item do %>
+        <div class="item-thumb box small-2 large-4 columns">
+          <%= image_tag item.pic %>
+          <div class="art-label">
+            <%= item.title %>
+          <% end %>
+        </div>
+      </div>
+  <% end %>
+  <a href = "#" class = "gallery-link">Full Gallery &rarr;</a>
 </div>
