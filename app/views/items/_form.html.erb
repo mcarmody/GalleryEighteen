@@ -12,23 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
+    <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :details %><br>
+    <%= f.label :details %>
     <%= f.text_area :details %>
   </div>
   <div class="field">
-    <%= f.label :price %><br>
+    <%= f.label :price %>
     <%= f.number_field :price %>
   </div>
   <div class="field">
-    <%= f.label :pic %><br>
+    <%= f.label :pic %>
     <%= f.text_area :pic %>
   </div>
   <%= f.hidden_field :user_id, value: current_user.id %>
   <div class="actions">
     <%= f.submit %>
-  </div>
+  </div> 
 <% end %>
