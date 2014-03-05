@@ -8,18 +8,6 @@ $coreblue: #7da6c7;
 $midblue: #5a8db6;
 $dkblue: #457399;
 
-.gravatar {	
-	display: block;
-	position: relative;
-	margin: 0 auto;
-	margin-bottom: 15px;
-	
-	img {
-		border: 1px solid black;
-	}
-
-}
-
 .user-name {
 	font-weight: bold;
 }
@@ -40,6 +28,7 @@ $dkblue: #457399;
 .interests {
 	float: left;
 	width: 100px;
+	height: 85px;
 	font-size: 10pt;
 }
 
@@ -55,7 +44,7 @@ $dkblue: #457399;
 	line-height: 20px;
 	font-size: 12pt;
 	font-weight: 300;
-	height: 270px;
+	height: 250px;
 
 	.avatar {
 		height: 120px;
@@ -132,19 +121,15 @@ $dkblue: #457399;
 	position: relative;
 	width: 100%;
 	bottom: -10px;
-	height: 30px;
 }
 
 .follow-button {
-	position: relative;
 	font-family: 'Over the Rainbow', cursive;
 	transition: 200ms;
-	bottom: -145px;
 	line-height: 12px;
-	left: -32px;
-	display: inline-block;
-	margin: 0 auto !important;
-	padding: 0 !important;
+	display: block;
+	margin: 0 auto;
+	padding: 0;
 	border: 1px solid $dkgray;
 	width: 80px;
 	text-align: center;
