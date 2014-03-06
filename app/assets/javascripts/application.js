@@ -24,6 +24,7 @@
 //= require masonry/box-maker
 //= require masonry/jquery.loremimages.min
 
+
 $(document).foundation();
 $(function(){ $(document).foundation(); });
 
@@ -87,3 +88,7 @@ $(function() {
 		$(this).find('label').css('display', 'none');
 	});
 });
+
+
+
+

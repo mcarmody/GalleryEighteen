@@ -24,8 +24,8 @@
     <%= f.number_field :price %>
   </div>
   <div class="field">
-    <%= f.label :pic %>
-    <%= f.text_area :pic %>
+    <%= f.label :picture %>
+    <%= f.file_field :picture, :multiple => true, name: 'item[picture]' %>
   </div>
   <%= f.hidden_field :user_id, value: current_user.id %>
   <div class="actions">

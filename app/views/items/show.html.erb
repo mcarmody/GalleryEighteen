@@ -1,7 +1,7 @@
-	<%= image_tag @item.pic, :class => "bg-img" %>
+	<%= image_tag @item.picture.url, :class => "bg-img" %>
 	<p id="notice"><%= notice %></p>
 	<div class="item-container">
-		<%= image_tag (@item.pic)%>
+		<%= image_tag (@item.picture.url)%>
 			
 		<div class='show-info'>
 		  <div class="show-title"><%= @item.title %></div>
